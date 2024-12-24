@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,5];
+        console.log('Array: ',arr);
+        // map 
+        var newarrr=arr.map((data)=>{
+            return data+2;
+        })
+        console.log('New array with map:',newarrr);
+
+        // filter 
+        var newarr2=arr.filter((data)=>{
+            return data>=3;
+        });
+        console.log("New array with filter for >=3: ",newarr2);
+
+        // find 
+        var newarr3=arr.find((data)=>{
+            return data==3;
+        })
+        console.log("Find the data 3: ",newarr3);
+
+        // reduce 
+        var arrSum=arr.reduce((accumulator,currentValue)=>{
+            return accumulator+currentValue;
+        },0);
+        console.log("Sum of array using reduce: ",arrSum);
+
+
+        // making the funtion that sum the cart prices of any shopping site 
+        var flipcart=[
+            {
+                price:200,
+                quantity:5
+            },
+            {
+                price:600,
+                quantity:3
+            },
+            {
+                price:800,
+                quantity:1
+            }
+        ];
+        var cartTotal=flipcart.reduce((accumulator,currentValue)=>{
+            return accumulator+currentValue.price*currentValue.quantity;
+        })
+        console.log("You cart value: ",cartTotal);
+    </script>
+</body>
+</html>

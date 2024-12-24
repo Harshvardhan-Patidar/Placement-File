@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 40px;
+        }
+        span{
+            background-color: yellow;
+            margin: 20px;
+            padding: 15px;
+        }
+        /* pseudo class */
+        button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        button:active{
+            border: 10px solid red;
+        }
+        button:focus{
+            color: blue;
+        }
+        a:link{
+            color: aqua;
+        }
+        a:visited{
+            color: green;
+        }
+        span:first-child{
+            background-color: pink;
+        }
+        span:last-child{
+            background-color: aqua;
+        }
+        span:nth-child(3){
+            background-color: blueviolet;
+        }
+
+        /* pseudo element */
+        h1::before{
+            content: "Good ";
+        }
+        h1::after{
+            content: " Harsh";
+        }
+        h1::first-letter{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <button>Click me</button><br>
+    <a href="https://www.googe.com">xyz</a><br><br><br>
+    <div class="parent">
+        <span class="">HI</span>
+        <span class="">HI</span>
+        <span class="">HI</span>
+        <span class="">HI</span>
+        <span class="">HI</span>
+    </div>
+
+    <h1>Moring</h1>
+</body>
+</html>

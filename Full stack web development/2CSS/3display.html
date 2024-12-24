@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .displayblock{
+            display: block;
+            background-color: yellow;
+            color: red;
+            height: 50px;
+        }
+        .displayinline{
+            display: inline;
+            background-color: red;
+            color: yellow;
+            /* height is not given because display is inline */
+            height: 50px;  
+        }
+        .displayinline-block{
+            display: inline-block;
+            background-color: aqua;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="displayblock">Lorem ipsum dolor sit.</div>
+    <div class="displayinline">Lorem, ipsum dolor.</div>
+    <div class="displayinline-block">Lorem, ipsum dolor.</div>
+</body>
+</html>

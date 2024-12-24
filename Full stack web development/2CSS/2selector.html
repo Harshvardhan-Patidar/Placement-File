@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universal selctor */
+        *{
+            width: 110px;
+        }
+
+        /* Id selector */
+        #para2{
+            color: white;
+        }
+
+        /* class selector */
+        .para1{
+            color: aqua;
+            border: 5px solid red;
+        }
+
+        /* Element selector */
+        h3{
+            color: yellow;
+        }
+
+        /* Element list selector */
+        h3,p{
+            background-color: black;
+        }
+
+        /* descendant selector */
+        ol li a{
+            font-size: 30px;
+        }
+
+        /* direct child slector */
+        div>p>u{
+            font-size: 20px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h3>This is H3 count 1</h3>
+    <h3>This is H3 count 2</h3>
+    <h3>This is H3 count 3</h3>
+    <h3>This is H3 count 4</h3>
+    <p id="para2" class="para1">This is para 1</p>
+    <p class="para1">This is para 2</p>
+
+    <ol>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li>this is list1</li>
+        <li>this is list2</li>
+    </ol>
+
+    <div>
+        <p>
+            <u>Lorem ipsum dolor sit amet.</u>
+        </p>
+    </div>
+</body>
+</html>

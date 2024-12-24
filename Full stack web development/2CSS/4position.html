@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css position */
+        .display{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 20px;
+        }
+        .displayreletive{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 100%;
+        }
+        .displayabsolute{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 100%;
+            left: 100%;
+        }
+        .displayfixed{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+        }
+        .displaysticky{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: sticky;
+            /* it can't go out of the blue box */
+            left: 1000px;
+            top: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <div class="displayreletive"></div>
+        <div class="displayabsolute"></div>
+        <div class="displayfixed"></div>
+        <div class="displaysticky"></div>
+    </div>
+</body>
+</html>
