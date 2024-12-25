@@ -1,0 +1,115 @@
+{
+    "users":
+        [
+            {
+              "id": 1,
+              "name": "John",
+              "surname": "Doe",
+              "email": "john.doe@example.com",
+              "issuedBook": "The Great Gatsby",
+              "issuedDate": "2024-12-01",
+              "returnDate": "2024-12-15",
+              "subscriptionType": "Premium",
+              "subscriptionDate": "2024-01-10"
+            },
+            {
+              "id": 2,
+              "name": "Jane",
+              "surname": "Smith",
+              "email": "jane.smith@example.com",
+              "issuedBook": "To Kill a Mockingbird",
+              "issuedDate": "2024-12-05",
+              "returnDate": "2024-12-20",
+              "subscriptionType": "Basic",
+              "subscriptionDate": "2023-11-20"
+            },
+            {
+              "id": 3,
+              "name": "Alice",
+              "surname": "Johnson",
+              "email": "alice.johnson@example.com",
+              "issuedBook": "1984",
+              "issuedDate": "2024-12-03",
+              "returnDate": "2024-12-18",
+              "subscriptionType": "Standard",
+              "subscriptionDate": "2024-03-15"
+            },
+            {
+              "id": 4,
+              "name": "Bob",
+              "surname": "Brown",
+              "email": "bob.brown@example.com",
+              "issuedBook": "Moby Dick",
+              "issuedDate": "2024-12-06",
+              "returnDate": "2024-12-21",
+              "subscriptionType": "Premium",
+              "subscriptionDate": "2023-12-05"
+            },
+            {
+              "id": 5,
+              "name": "Charlie",
+              "surname": "Davis",
+              "email": "charlie.davis@example.com",
+              "issuedBook": "Pride and Prejudice",
+              "issuedDate": "2024-12-07",
+              "returnDate": "2024-12-22",
+              "subscriptionType": "Basic",
+              "subscriptionDate": "2024-07-01"
+            },
+            {
+              "id": 6,
+              "name": "Emily",
+              "surname": "Wilson",
+              "email": "emily.wilson@example.com",
+              "issuedBook": "The Catcher in the Rye",
+              "issuedDate": "2024-12-08",
+              "returnDate": "2024-12-23",
+              "subscriptionType": "Standard",
+              "subscriptionDate": "2024-09-15"
+            },
+            {
+              "id": 7,
+              "name": "Frank",
+              "surname": "Garcia",
+              "email": "frank.garcia@example.com",
+              "issuedBook": "The Hobbit",
+              "issuedDate": "2024-12-09",
+              "returnDate": "2024-12-24",
+              "subscriptionType": "Premium",
+              "subscriptionDate": "2024-05-20"
+            },
+            {
+              "id": 8,
+              "name": "Grace",
+              "surname": "Martinez",
+              "email": "grace.martinez@example.com",
+              "issuedBook": "War and Peace",
+              "issuedDate": "2024-12-10",
+              "returnDate": "2024-12-25",
+              "subscriptionType": "Basic",
+              "subscriptionDate": "2023-06-10"
+            },
+            {
+              "id": 9,
+              "name": "Henry",
+              "surname": "Clark",
+              "email": "henry.clark@example.com",
+              "issuedBook": "Jane Eyre",
+              "issuedDate": "2024-12-11",
+              "returnDate": "2024-12-26",
+              "subscriptionType": "Standard",
+              "subscriptionDate": "2024-08-15"
+            },
+            {
+              "id": 10,
+              "name": "Ivy",
+              "surname": "Harris",
+              "email": "ivy.harris@example.com",
+              "issuedBook": "The Alchemist",
+              "issuedDate": "2024-12-12",
+              "returnDate": "2024-12-27",
+              "subscriptionType": "Premium",
+              "subscriptionDate": "2023-10-05"
+            }
+        ]
+}
