@@ -1,9 +1,10 @@
 const express = require("express");
-const { users } = require("./data/users.json");
-const { books } = require("./data/books.json");
 const app = express();
 app.use(express.json());
 const PORT = 8081;
+
+const usersRouter=require("./routes/users.js")
+const booksRouter=require("./routes/books.js")
 
 app.get("/", (req, res) => {
   res.status(200).json({
@@ -11,15 +12,11 @@ app.get("/", (req, res) => {
   });
 });
 
-// route: /users
-// methos: get
-// discription: show all users information
-app.get("/users",(req,res)=>{
-    res.status(200).json({
-        success: true,
-        data:  users,
-    })
-})
+// https://localhost8081/users
+app.use("/users",usersRouter)
+
+// https://localhost8081/books
+app.use("/books",booksRouter)
 
 app.get("*", (req, res) => {
   res.status(200).json({
