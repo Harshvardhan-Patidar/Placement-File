@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
   // route: /books/:id
   router.get("/:id", (req, res) => {
     const id = req.params;
-    const book = books.find((iterate) => books.id == id);
+    const book = books.find((iterate) => iterate.id == id);
     if (!book) {
       return res.status(404).json({
         success: false,
@@ -60,5 +60,7 @@ router.post("/", (req, re) => {
       message: "Book added",
     });
   });
+
+// method:
 
 module.exports=router;
