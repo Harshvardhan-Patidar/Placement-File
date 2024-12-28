@@ -66,7 +66,7 @@ router.post("/", (req, res) => {
   });
 
 // method: put
-// route: /users/:id (updating the data)
+// route: /users/:id (updating the user data)
 router.put("/:id", (req, res) => {
     const id = req.params;
     const data = req.body;

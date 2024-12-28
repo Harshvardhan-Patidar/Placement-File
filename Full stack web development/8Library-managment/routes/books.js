@@ -31,13 +31,21 @@ router.get("/", (req, res) => {
   // route: /books/issued
   router.get("/issued", (req, res) => {
     var bookIssued;
+    const issuedBook=[];
     users.forEach((iterate) => {
-      bookIssued = books.forEach((element) => iterate.issuedBook == element.name);
+      bookIssued = books.find((element) => iterate.issuedBook == element.name);
+      issuedBook.push(bookIssued);
     });
-  
+    
+    if(issuedBook.length==0){
+      return res.status(404).json({
+        success:false,
+        message:"No book have been issued",
+      })
+    }
     res.status(200).json({
       success: true,
-      bookIssued,
+      issuedBook,
     });
   });
 
@@ -61,6 +69,33 @@ router.post("/", (req, re) => {
     });
   });
 
-// method:
+// method: put
+// route: /books/:id (updateing the book data)
+router.put("/:id", (req, res) => {
+    const id = req.params;
+    const data = req.body;
+    const book = books.find((iterate) => iterate.id == id);
+    if (!book) {
+      return res.status(404).json({
+        success: false,
+        message: "Book not found",
+      });
+    }
+  
+    const updateBookData = books.map((iterate) => {
+      if (iterate.id == id) {
+        return {
+          ...iterate,
+          ...data,
+        };
+      }
+      return iterate;
+    });
+  
+    res.status(200).json({
+      success: true,
+      message: "Data updated",
+    });
+  });
 
 module.exports=router;
