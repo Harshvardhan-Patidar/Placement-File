@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.9.3"
+  },
+  "name": "9mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
