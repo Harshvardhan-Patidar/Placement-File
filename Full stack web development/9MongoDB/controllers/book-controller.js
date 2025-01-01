@@ -1,4 +1,5 @@
 const {UserModel,BookModel}=require("../models/localIndex")
+const IssuedBook = require("../dtos/book-dto")
 
 // exports.getAllBooks=()=>{}
 const getAllBooks=async (req,res)=>{
@@ -29,10 +30,13 @@ const getSingleBookById=async (req,res)=>{
     })
 }
 
-exports.getAllIssuedBooks=async (req,res)=>{
+const getAllIssuedBooks=async (req,res)=>{
     const user=await UserModel.find({
         issuedBook:{$exists:true},
     }).populate("issuedBook")
+
+    // Data transfer object 
+    const issuedBooks=user.map((each)=>new IssuedBook(each))
     
     if(issuedBooks.length==0){
         return res.status(404).json({
@@ -46,4 +50,31 @@ exports.getAllIssuedBooks=async (req,res)=>{
     })
 }
 
-module.exports={getAllBooks,getSingleBookById}
+const addNewBook=async(req,res)=>{
+    const data=req.body;
+    if(!body){
+        return res.status(404).json({
+            success:false,
+            message:"No data found"
+        })
+    }
+    await BookModel.create(data)
+    const allBooks=await BookModel.find()
+    res.status(200).json({
+        success:true,
+        data:allBooks
+    })
+}
+
+const updateBookById=async(req,res)=>{
+    const id=req.params;
+    const data=req.body;
+    const updatedBook=await BookModel.findOneAndUpdate({_id:id},data,{new:true})
+
+    res.status(200).json({
+        success:true,
+        data:updatedBook,
+    })
+}
+
+module.exports={getAllBooks,getSingleBookById,getAllIssuedBooks,addNewBook,updateBookById}

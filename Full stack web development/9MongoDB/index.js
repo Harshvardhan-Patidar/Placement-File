@@ -7,13 +7,13 @@ app.use(express.json)
 const PORT=5173;
 
 dotenv.config();
-dbConnection();
 
 app.get("/",(req,res)=>{
     res.status(200).json({
         message:"Server is up and running"
     })
 })
+dbConnection();
 
 const usersRouter=require("./routes/users.js")
 const booksRouter=require("./routes/books.js")
