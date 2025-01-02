@@ -1,8 +1,10 @@
 import "./App.css";
-import ClassComponent from "./components/ClassComponent.jsx";
-import FuntionComponent from "./components/funtionComponent.jsx";
+import { Routes,Route } from "react-router-dom";
+import ClassComponent from "./components/pages/ClassComponent.jsx";
+import FuntionComponent from "./components/pages/funtionComponent.jsx";
 import State from "./components/state.jsx";
 import Props from "./components/props.jsx";
+import BaseHoc from "./highOrderComponent/baseHoc.jsx";
 
 function App() {
   let naam="hp"
@@ -10,9 +12,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Types of Components in React</h1>
+        <h3>Go to "/class" "/funtion"</h3>
       </header>
-      <ClassComponent />
-      <FuntionComponent />
+
+      <Routes>
+        <Route path='/class' element={<ClassComponent/>} />
+        <Route path="/funtion" element={<FuntionComponent/>} /> 
+      </Routes>
+      
       <State />
       <Props name="Harsh" age={20} naam={naam} />
     </div>
