@@ -6,10 +6,10 @@ function funtionComponent() {
     )
 }
 
-const funtionComponentArrowEg = () => {
+export const funtionComponentArrowEg = () => {
     return(
         <div>
-            <h1>Arrowm Function Component Example</h1>
+            <h1>Arrow Function Component Example</h1>
         </div>
     )
 }
