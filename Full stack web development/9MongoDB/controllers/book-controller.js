@@ -16,7 +16,7 @@ const getAllBooks=async (req,res)=>{
     })
 }
 const getSingleBookById=async (req,res)=>{
-    const id=req.params;
+    const {id}=req.params;
     const book=await BookModel.findById(id);
     if(!book){
         return res.status(404).json({
@@ -67,7 +67,7 @@ const addNewBook=async(req,res)=>{
 }
 
 const updateBookById=async(req,res)=>{
-    const id=req.params;
+    const id=req.params.id;
     const data=req.body;
     const updatedBook=await BookModel.findOneAndUpdate({_id:id},data,{new:true})
 
