@@ -16,7 +16,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path='/class' element={<ClassComponent/>} />
+        <Route path='/class' element={<BaseHoc><ClassComponent/></BaseHoc>} />
         <Route path="/funtion" element={<FuntionComponent/>} /> 
       </Routes>
       

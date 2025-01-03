@@ -1,3 +1,5 @@
+import BaseHoc from "../../highOrderComponent/baseHoc"
+
 function funtionComponent() {
     return(
         <div>
@@ -14,4 +16,4 @@ function funtionComponent() {
 //     )
 // }
 
-export default funtionComponent
+export default BaseHoc(funtionComponent)
